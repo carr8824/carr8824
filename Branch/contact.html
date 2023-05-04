@@ -1,0 +1,86 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Form</title>
+        <link rel="stylesheet" href="contact.css">
+    </head>
+
+
+
+
+   
+
+    <body>
+
+
+
+    <div class="content">
+
+
+    <div  class="column">
+
+    <h1 id="headcontact">Contact Me</h1>
+
+
+
+    <form id="contact-form" action="https://formspree.io/f/xrgvjalw" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        
+        <label for="how_did_you_hear">How did you hear about me?</label>
+        <input type="text" id="how_did_you_hear" name="how_did_you_hear" required placeholder="Enter a source">
+
+        <label for="reason">Reason for contacting:</label>
+        <select id="reason" name="reason" required>
+            <option value="">Please select a reason</option>
+            <option value="teaching">Teaching</option>
+            <option value="workshops">Workshops</option>
+            <option value="consultancy">Consultancy</option>
+            <option value="advisory">Advisory</option>
+            <option value="research_collaboration">Research Collaboration</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <label for="issue">Brief explanation of your issue:</label>
+        <textarea id="issue" name="issue" rows="6" required placeholder="Describe your issue"></textarea>
+        
+        <input type="hidden" name="_next" value="https://carr8824.blogspot.com/" />
+        <button type="submit">Submit</button>
+    </form>
+
+
+    </div>
+
+
+
+        <div class="column" id="description">
+
+
+    <p>
+        Hello and thank you for your interest in my services! I'm delighted that you're considering me for teaching, workshops, consultancy, advisory, or research collaboration. I believe that we can work together to achieve great results, and I'm excited about the opportunity to collaborate with you.
+    </p>
+    <p>
+        To help me understand your needs and serve you better, please take a moment to fill out the form below. Your input is invaluable, and I assure you that I will promptly review your message and respond as soon as possible. Don't hesitate to share your thoughts or ask any questions – I'm here to help you and make our collaboration a success.
+    </p>
+    <p>
+        Once again, thank you for considering me as your partner, and I look forward to the possibility of working together!
+    </p>
+
+    <footer>
+        <p>"Coming together is a beginning; keeping together is progress; working together is success." - Henry Ford</p>
+    </footer>
+
+    </div>
+
+
+    </div>
+
+  
+
+    </body>
+    </html>

@@ -1,0 +1,71 @@
+h1 {
+    color:rgb(18, 13, 13);
+    text-shadow:dimgrey 0.07em 0.03em 0.07em;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 0em;
+    font-size: 3.8em;
+    position: relative;
+    text-align: center;
+    line-height: 1.5em;
+    background-color: rgb(233, 231, 228);
+
+}
+
+
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.articles{
+    list-style: none;
+    justify-content: space-between;
+    flex: 1;
+}
+
+
+.articles ul{
+    display:block;
+    position: relative;
+    font-size: 1.4em;;
+}
+
+
+
+
+.articles ul > li {
+    text-align: justify;
+}
+
+
+
+footer{
+    background-image: url('BCK4.png');
+    background-size:cover;
+    background-clip: padding-box;
+    text-align: center;
+    font-size: larger;
+    font-weight: 450;
+    font-style: italic;
+    color: rgb(8, 8, 8);
+    line-height: 100%;
+    padding: 1.5px;
+
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a:hover{
+    color: dimgrey;
+}
+
+.clearlinks{
+    clear:both
+
+}
