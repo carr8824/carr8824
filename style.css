@@ -51,7 +51,11 @@ nav ol li a {
     color: #faf3f3;
     background-color: #ece7e7;
     text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
+
 
 
   nav ol ul {
@@ -66,6 +70,7 @@ nav ol li a {
     font-size: 0.5em;
     padding-right: 2.2em;
     padding-bottom: 0.5em;
+    z-index: 1000;
   }
 
   nav ol ul li {
@@ -94,49 +99,92 @@ nav ol li a {
 }
 
 
-
-#content{
-    display: flex;
-		flex-wrap: wrap;
-		justify-content:space-around;
-    text-align: justify;
-    font-size: 1.4em;;
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start; /* Align items at the start, don't stretch them */
+  text-align: justify;
+  font-size: 1.4em; /* This sets the base font size for children, adjust as needed */
+  display: flex;
 }
+
+
+.text-content {
+  font-size: 1em; /* Adjust this value as needed for better readability */
+  /* Remove the width property since .column already controls it */
+}
+
+.profile-pic img {
+  max-width: 100%; /* Ensures the image is responsive and does not exceed its container */
+  height: auto; /* Maintains aspect ratio */
+}
+
 
 
 .column {
-  flex-basis: 45%;
-  padding: 45px;
-  margin-bottom: 20px;
+  flex: 1; /* Allows the column to grow to fill the space */
+  padding: 20px; /* Keep consistent padding */
+  margin-bottom: 20px; /* Keep consistent margin */
   background-color: #f7f8f8;
   border-radius: 8px;
-  
+  display: flex;
+  flex-direction: column; /* Stacks items within the column vertically */
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  max-width: 45%; /* Ensures that the column does not grow beyond this percentage */
 }
 
 
-@media screen and (max-width: 767px) {
+.column img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+@media screen and (max-width: 960px) {
   .column {
     flex-basis: 100%;
+    max-width: 100%; /* En pantallas pequeñas, cada columna toma el ancho completo */
+
   }
+  .profile-pic,
+  .text-content {
+      width: 100%;
+  }
+
+  /* Additional styles for menu */
+  nav ol li {
+    display: block; /* Stack the menu items vertically */
+}
+
+nav ol ul {
+    position: static; /* Adjust submenu position */
+}
 }
 
 
-.snetw{
-    list-style: none;
-    justify-content: center;
-    align-items: center;
+
+
+.snetw {
+  list-style: none;
+  text-align: center; /* Center align the list */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
+.snetw li {
+  display: inline-block; /* Inline-block for horizontal list */
+  margin: 0 10px; /* Adjust space between icons */
+  width: auto; /* Adjust width as needed */
+  padding: 0; /* Remove default padding */
+  transition: color 0.3s; /* Smooth transition for hover effects */
+}
 
-
-.snetw li{
-    display: inline-block;
-    position: relative;
-    transition: color 0.3s;
-    margin-left: 8em;
-    width: 1.2em;
-    padding: 0.5em 6em;
-
+.snetw li img {
+  width: 40px; /* Adjust icon size */
+  height: auto; /* Maintain aspect ratio */
 }
 
 
@@ -174,4 +222,50 @@ img {
   display: block;
   margin: 0 auto;
 
+}
+
+.profile-pic {
+  width: 50%; /* Or whatever ratio you prefer */
+  position: relative;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: white; /* Text color */
+  font-family: 'Montserrat', sans-serif; /* Font family */
+  font-size: 0.6em; /* Font size */
+  padding: 5px; /* Padding around the text */
+  text-align: center; /* Center the text */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+}
+
+
+
+.profile-pic:hover .overlay {
+  display: block;
+  opacity: 1; /* Show overlay on hover */
+}
+
+
+
+.overlay p {
+  margin: 0; /* Remove default paragraph margin */
+  color: #f7f8f8; /* Light color for readability on dark background */
+  max-width: 90%; /* Max width for the text */
+  line-height: 1.4; /* Line height for better readability */
 }
