@@ -116,7 +116,7 @@ nav ol li a {
 }
 
 .profile-pic img {
-  max-width: 100%; /* Ensures the image is responsive and does not exceed its container */
+  /*max-width: 100%; /* Ensures the image is responsive and does not exceed its container */
   height: auto; /* Maintains aspect ratio */
 }
 
