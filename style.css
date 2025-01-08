@@ -272,7 +272,13 @@ img {
 
 
 .video-container iframe {
-  width: 100%; /* Ocupa todo el ancho disponible de la columna */
-  height: auto; /* Ajusta automáticamente la altura */
-  aspect-ratio: 16/9; /* Mantén la proporción de video estándar */
+  width: 100%; /* Ocupa todo el ancho disponible del contenedor */
+  height: auto; /* Calcula automáticamente la altura */
+  aspect-ratio: 16 / 9; /* Mantiene la proporción de video 16:9 */
+}
+
+.video-container {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho de la columna */
+  text-align: center; /* Centra el contenido dentro del contenedor */
+  margin: 0 auto; /* Asegura márgenes uniformes */
 }
