@@ -269,3 +269,10 @@ img {
   max-width: 90%; /* Max width for the text */
   line-height: 1.4; /* Line height for better readability */
 }
+
+
+.video-container iframe {
+  width: 100%; /* Ocupa todo el ancho disponible de la columna */
+  height: auto; /* Ajusta automáticamente la altura */
+  aspect-ratio: 16/9; /* Mantén la proporción de video estándar */
+}
